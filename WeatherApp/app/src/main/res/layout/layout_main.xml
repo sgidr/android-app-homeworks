@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_slowchange"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_marginTop="30dp"
+            android:id="@+id/main_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textColor="@color/white"
+            android:text="城市"/>
+        <TextView
+            android:id="@+id/main_weather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/material_dynamic_neutral95"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:text="晴"/>
+        <TextView
+            android:id="@+id/main_temp_big"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="55sp"
+            android:textColor="@color/white"
+            android:text="25℃"/>
+        <TextView
+            android:id="@+id/max_min"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/material_dynamic_neutral95"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:text="最高：25℃  最低：18℃"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="@drawable/bg_shadow_radius"
+            android:elevation="4dp"
+
+            android:layout_marginBottom="10dp"
+            android:translationZ="10dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="20dp"
+                android:gravity="center_vertical">
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_sun"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="@color/white"
+                    android:text="白天"/>
+            </LinearLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:textColor="@color/material_dynamic_neutral95"
+                    android:text="天气"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/main_day_weather"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:layout_gravity="right"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:textColor="@color/material_dynamic_neutral95"
+                    android:text="晴"
+                    tools:ignore="MissingConstraints" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:textColor="@color/material_dynamic_neutral95"
+                    android:text="湿度"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/main_day_temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:layout_gravity="right"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:textColor="@color/material_dynamic_neutral95"
+                    android:text="25℃"
+                    tools:ignore="MissingConstraints" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:textColor="@color/material_dynamic_neutral95"
+                    android:text="风力"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/main_day_wind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:layout_gravity="right"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:textColor="@color/material_dynamic_neutral95"
+                    android:text="南风1-2级"
+                    tools:ignore="MissingConstraints" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:elevation="4dp"
+            android:translationZ="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_shadow_radius"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="20dp"
+                android:gravity="center_vertical">
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_moon"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="@color/white"
+                    android:text="夜间"/>
+            </LinearLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:textColor="@color/material_dynamic_neutral95"
+                    android:text="天气"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/main_night_weather"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:layout_gravity="right"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:textColor="@color/material_dynamic_neutral95"
+                    android:text="晴"
+                    tools:ignore="MissingConstraints" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:textColor="@color/material_dynamic_neutral95"
+                    android:text="湿度"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/main_night_temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:layout_gravity="right"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:textColor="@color/material_dynamic_neutral95"
+                    android:text="25℃"
+                    tools:ignore="MissingConstraints" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:textColor="@color/material_dynamic_neutral95"
+                    android:text="风力"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/main_night_wind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:layout_gravity="right"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:textColor="@color/material_dynamic_neutral95"
+                    android:text="南风1-2级"
+                    tools:ignore="MissingConstraints" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:padding="6dp"
+            android:elevation="4dp"
+            android:translationZ="10dp"
+            android:background="@drawable/bg_shadow_radius"
+            android:orientation="horizontal"
+            android:columnCount="4"
+            android:rowCount="1"
+            android:useDefaultMargins="true"
+            android:gravity="center_vertical">
+            <LinearLayout
+                android:id="@+id/beijing"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_shadow_radius"
+                android:elevation="4dp"
+                android:translationZ="10dp"
+                android:gravity="center"
+                android:layout_columnWeight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="北京"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/shanghai"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_columnWeight="1"
+                android:gravity="center"
+                android:background="@drawable/bg_shadow_radius"
+                android:elevation="4dp"
+                android:translationZ="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="上海"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/guangzhou"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_columnWeight="1"
+                android:background="@drawable/bg_shadow_radius"
+                android:elevation="4dp"
+                android:translationZ="10dp"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:text="广州"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/shenzhen"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_columnWeight="1"
+                android:background="@drawable/bg_shadow_radius"
+                android:elevation="4dp"
+                android:translationZ="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:text="深圳"/>
+            </LinearLayout>
+
+        </GridLayout>
+
+
+    </LinearLayout>
+
+    <GridLayout
+        android:background="@drawable/bg_shadow_radius"
+        android:elevation="4dp"
+        android:translationZ="10dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:padding="8dp"
+        android:layout_width="220dp"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:columnCount="2"
+        android:rowCount="1"
+        android:layout_gravity="center"
+        android:gravity="center"
+        tools:ignore="MissingConstraints">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_columnWeight="1"
+            android:background="@drawable/bg_shadow_radius"
+            android:elevation="4dp"
+            android:translationZ="10dp"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_location"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:layout_gravity="center"
+                android:text="城市"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/main_forsee"
+            android:layout_columnWeight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_forsee"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:layout_gravity="center"
+                android:text="预测"/>
+        </LinearLayout>
+
+    </GridLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
